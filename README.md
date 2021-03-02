@@ -21,16 +21,10 @@ kubectl create ns argocd
 kubectl -n argocd apply -f ./k8s-argocd-v1/resources/vendor.yaml
 ```
 
-<<<<<<< HEAD
 ## Get ArgoCD Password
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base65 -d && echo
 ```
-=======
-`git clone https://github.com/argoproj/argo-cd.git`
-
-`kustomize build argo-cd/manifests/ha/cluster-install > k8s-argocd-v1/resources/vendor.yaml`
->>>>>>> 25059443c4fd4fc3d1b117c23ec2a44071e421ae
 
 ## Expose ArgoCD deployment
 ```
